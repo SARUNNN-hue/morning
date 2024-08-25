@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://www.w3schools.com/w3images/mountains.jpg') no-repeat center center fixed; 
+            background-size: cover; /* Cover the entire viewport */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        /* Container for centered content */
+        .container {
+            text-align: center;
+            position: relative;
+            color: #fff;
+        }
+
+        /* Animated message styling */
+        .message {
+            font-size: 4rem;
+            color: #FFD700; /* Gold color */
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out, bounce 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        /* Ghost emoji styling */
+        .ghost {
+            font-size: 4rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Animation effects */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Additional decorative element */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+            animation: overlayMove 30s linear infinite;
+        }
+
+        @keyframes overlayMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Good Morning <span class="ghost">👻</span>!</div>
+    </div>
+  <div class="message">Love you! <span class="ghost">🫶</span>!</div>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>
